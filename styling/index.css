@@ -15,8 +15,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(lightblue), to(blue));
-  background-image: linear-gradient(to bottom, lightblue, blue);
 }
 
 body main .container {
@@ -89,27 +87,37 @@ body main .container .maincontent .top #qa #line {
   display: none;
 }
 
-body main .container .maincontent .bottom input {
-  padding: 20px;
+body main .container .maincontent .bottom {
+  height: 50px;
+}
+
+body main .container .maincontent .bottom .si {
+  position: absolute;
+  z-index: 1;
+  height: 50px;
+}
+
+body main .container .maincontent .bottom #search {
+  padding: 20px 20px 20px 50px;
   color: black;
   background: white;
   height: 50px;
   border-radius: 20px;
 }
 
-body main .container .maincontent .bottom input ::-webkit-input-placeholder {
+body main .container .maincontent .bottom #search ::-webkit-input-placeholder {
   color: gray;
 }
 
-body main .container .maincontent .bottom input :-ms-input-placeholder {
+body main .container .maincontent .bottom #search :-ms-input-placeholder {
   color: gray;
 }
 
-body main .container .maincontent .bottom input ::-ms-input-placeholder {
+body main .container .maincontent .bottom #search ::-ms-input-placeholder {
   color: gray;
 }
 
-body main .container .maincontent .bottom input ::placeholder {
+body main .container .maincontent .bottom #search ::placeholder {
   color: gray;
 }
 

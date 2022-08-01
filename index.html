@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styling/index.css">
     <title>Whats the weather</title>
 </head>
-<body>
+<body id="pb">
     <main>
         <div class="container">
             <div class="container w-100 maincontent">
@@ -36,7 +36,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="bottom">
+                <div class="bottom w-100">
+                    <img src="assets/search_icon.png" class="si">
                     <input type="text" placeholder="Search for a place" id="search" class="w-100">
                 </div>
             </div>
@@ -48,5 +49,5 @@
 </body>
 </html>
 <script src="./javascript/index.js"></script>
-<script src="./javascript/api/currentweather.js"></script>
+<script type="module" src="./javascript/api/currentweather.js"></script>
 <script src="./javascript/api/suggestions.js"></script>

@@ -1,12 +1,19 @@
-var CURRENT_WEATHER_TOKEN = 'bda1e10853d01663bd1b4e6cad38abc9'
+var CURRENT_WEATHER_TOKEN = 'bda1e10853d01663bd1b4e6cad38abc9' //Yes I'm well aware that its visible for the naked eye.
+
+var pagebody = document.getElementById('pb')
+pagebody.style.backgroundImage = "url('assets/rainy.jpg')"
+pagebody.style.backgroundSize = "cover"
+pagebody.style.backgroundRepeat = "none"
+
 //Search and fetch
 var inputbox = document.getElementById('search')
 inputbox.onclick = function() {
     document.addEventListener("keyup", function(event) {
         if (event.keyCode === 13) {
+            
             //Check whether there is value or not
             if(inputbox.value) {
-                
+            
                 //First fetch API
                 fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputbox.value}&appid=${CURRENT_WEATHER_TOKEN}&units=metric`)
                     .then(response => response.json())
@@ -39,11 +46,13 @@ inputbox.onclick = function() {
                         document.getElementById('humidity').innerHTML           = `${humidity}`
                         document.getElementById('wtimg').innerHTML              = `${icon}`
 
-                        //Testing
-                        console.log(cname, what, humidity, temp, feelslike, wind, description)
                     })
-                    .catch(err => console.error(err));     
-            }else { return }              
+                    .catch(err => console.error(err));   
+
+            }
+            else if(!inputbox.value) {
+                alert('Specify a location.')
+            }          
         }
     });
 }
