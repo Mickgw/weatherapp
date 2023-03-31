@@ -1,5 +1,9 @@
 var CURRENT_WEATHER_TOKEN = 'bda1e10853d01663bd1b4e6cad38abc9' //Yes I'm well aware that its visible for the naked eye.
 
+var is_julius_bozo = true;
+
+var heeft_mick_dit_kunnen_aanpassen = true;
+
 var pagebody = document.getElementById('pb')
 pagebody.style.backgroundImage = "url('assets/rainy.jpg')"
 pagebody.style.backgroundSize = "cover"
